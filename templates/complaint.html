@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Complaint
+{% endblock title %}
+
+{% block content %}
+        <!-- Breadcrumb Section Begin -->
+        <div class="breadcrumb-option spad set-bg" data-setbg="static/img/breadcrumb-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="breadcrumb__text">
+                            <h2>Complaint</h2>
+                            <div class="breadcrumb__links">
+                                <a href="/">Home</a>
+                                <span>Complaint</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb Section End -->
+
+        <!-- Contact Section Begin -->
+        <section class="contact spad">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="contact__form__text">
+                            <div class="section-title">
+                                <span>Please fill the field below to file complaint</span>
+                                <h2>File a Complaint</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="contact__form">
+                            <form action="/complaint_form" method="POST">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <input type="text" name="name" placeholder="Full Name" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <input type="email" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <input type="tel" name="phone" placeholder="Phone Number"  required>
+                                    </div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" name="country"  placeholder="Country" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <input type="text" name="name2" placeholder="Name of fradulent company / persons involved in the scam" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <input list="amount" name="amount" value="" placeholder="Amount lost " class="col-sm-6 custom-select custom-select-sm" required>
+                                        <datalist id="amount">
+                                            <option value="$500 - $5000">$500 - $5000</option>
+                                            <option value="$5000 - $10,000">$5000 - $10,000</option>
+                                            <option value="$10,000 - Above">$10,000 - Above</option>
+                                        </datalist>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <input list="Payment type" name="payment" value="" placeholder="Payment Type" class="col-sm-6 custom-select custom-select-sm" required>
+                                        <datalist id="Payment type">
+                                            <option value="Credit/Debit">Credit/Debit</option>
+                                            <option value="Bank Wire Transfer">Bank Wire Transfer</option>
+                                            <option value="Bitcoin/Crypto">Bitcoin/Crypto</option>
+                                            <option value="Other">Other</option>
+                                        </datalist>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <textarea name="message" placeholder="More info about the issue"></textarea>
+                                        <button type="submit" class="site-btn">Send Complaint</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+    
+{% endblock content %}
+

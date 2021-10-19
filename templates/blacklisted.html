@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Blacklisted
+{% endblock title %}
+
+{% block content %}
+<!-- Breadcrumb Section Begin -->
+<div class="breadcrumb-option spad set-bg" data-setbg="static/img/breadcrumb-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Blacklisted</h2>
+                    <div class="breadcrumb__links">
+                        <a href="/">Home</a>
+                        <span>Blacklisted</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Section End -->
+
+<div class="container">
+    <div class="container">
+        <div class="span">
+            {% for x in blu %}
+            <h4>{{ x.id }}</h4>
+            <p>{{ x.description }}</p>
+            <hr>
+            <div>
+                <div class="tags">
+                    <span class="btn-info"><a href="#">category | {{ x.category }}</a></span>
+                    <span class="btn-info"><a href="#">url | {{ x.url }}</a></span>
+                </div>    
+            </div> 
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
