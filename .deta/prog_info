@@ -1,1 +1,0 @@
-{"id":"85cb3dff-7c6f-4176-93ef-f55caa30d554","space":7746,"runtime":"python3.9","name":"genesen","path":"t2mbqk","project":"a0w8cydc","account":"144798365827","region":"eu-central-1","deps":["fastapi","jinja2","aiofiles","python-multipart","email-validator","requests","mailjet_rest","python-dotenv"],"envs":null,"public":false,"log_level":"","cron":""}
