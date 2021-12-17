@@ -71,7 +71,7 @@ def Courses(request:Request, email: Optional[EmailStr] = Form(...)):
 
 @app.post('/email')
 def Contact_form(request:Request, email: EmailStr = Form(...),  name: str = Form(...),  message: str = Form(...)):
-    mailjet = Client(auth=('5e59570aaae2e4a7c5e2a57f24f3253b', '664b1383b87203510e004ce67e971ed1'), version='v3.1')
+    mailjet = Client(auth=('api_key', 'api_secret'), version='v3.1')
     data = {
     'Messages': [
             {
@@ -104,7 +104,7 @@ def Contact_form(request:Request, email: EmailStr = Form(...),  name: str = Form
 
 @app.post('/complaint_form')
 def Contact_form(request:Request, email: EmailStr = Form(...),  name: str = Form(...),  message: Optional[str] = Form('no message'), phone: str = Form(...), country: str = Form(...), name2: str = Form(...), amount: str = Form(...), payment: str = Form(...), ):
-    mailjet = Client(auth=('5e59570aaae2e4a7c5e2a57f24f3253b', '664b1383b87203510e004ce67e971ed1'), version='v3.1')
+    mailjet = Client(auth=('api_key', 'api_secret'), version='v3.1')
     data = {
   'Messages': [
 		{
